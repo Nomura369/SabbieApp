@@ -1,4 +1,4 @@
-import { NavigationContainer, useTheme } from '@react-navigation/native';
+import { NavigationContainer, useTheme, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {
@@ -71,8 +71,8 @@ const TheDrawer = () => { // Drawer導覽編排
     <Drawer.Navigator
       initialRouteName="HomeStack"
       screenOptions={{
-        headerShown: true,
-        drawerActiveTintColor: colors.primary2,
+        //headerShown: false,
+        // drawerActiveTintColor: colors.primary2,
         drawerInactiveTintColor: colors.character1,
         drawerStyle: { width: 300 },
         drawerLabelStyle: { fontSize: 14 }, // icon旁的文字設定
@@ -83,7 +83,7 @@ const TheDrawer = () => { // Drawer導覽編排
         name="HomeStack"
         component={HomeStack}
         options={{
-          
+          headerShown: false,
           drawerLabel: "首頁",
           drawerIcon: ({ color }) => (
             <MaterialCommunityIcons name="home" color={color} size={24} />
@@ -104,6 +104,8 @@ const TheDrawer = () => { // Drawer導覽編排
         name="Setting"
         component={GeneralAccountScreen}
         options={{
+          headerTransparent: true, // 使 Header 背景透明化
+          headerTitle: "", //文字透明化 => 直接不寫標題
           drawerLabel: "設定",
           drawerIcon: ({ color }) => (
             <MaterialCommunityIcons name="cog" color={color} size={24} />
@@ -114,6 +116,8 @@ const TheDrawer = () => { // Drawer導覽編排
         name="Help"
         component={HelpScreen}
         options={{
+          headerTransparent: true, // 使 Header 背景透明化
+          headerTitle: "", //文字透明化 => 直接不寫標題
           drawerLabel: "幫助",
           drawerIcon: ({ color }) => (
             <MaterialCommunityIcons name="help-circle" color={color} size={24} />
@@ -121,15 +125,17 @@ const TheDrawer = () => { // Drawer導覽編排
         }}
       />
       <Drawer.Screen
-          name="Logout"
-          component={LogoutScreen}
-          options={{
-            drawerLabel: "登出",
-            drawerIcon: ({ color }) => (
-              <MaterialCommunityIcons name="logout" color={color} size={24} />
-            ),
-          }}
-        />
+        name="Logout"
+        component={LogoutScreen}
+        options={{
+          headerTransparent: true, // 使 Header 背景透明化
+          headerTitle: "", //文字透明化 => 直接不寫標題
+          drawerLabel: "登出",
+          drawerIcon: ({ color }) => (
+            <MaterialCommunityIcons name="logout" color={color} size={24} />
+          ),
+        }}
+      />
     </Drawer.Navigator>
   );
 }
@@ -145,11 +151,11 @@ const CustomDrawerContent = (props) => { // Drawer頁面排版
         <Image
           height={48}
           width={48}
-          source={{ uri: "https://i.imgur.com/XW0YcYX.png" }} //登入後預計會換成彩色圖片
+          source={{ uri: "https://i.imgur.com/x0ukH7v.png" }}
           alt='userImage'
         />
-        {/*登入後再從 firebase 撈用戶名來用*/}
-        <Text fontSize={20} color={colors.character2} my={16}>訪客</Text>
+        {/*登入後再從 firebase 撈用戶名來用……原本是這麼打算啦*/}
+        <Text fontSize={20} color={colors.character2} my={16}>很高興見到你！</Text>
       </VStack>
       <Divider mb={8} />
 
@@ -165,7 +171,6 @@ const CustomDrawerContent = (props) => { // Drawer頁面排版
 
 /*Stack專區-起點*/
 const HomeStack = ({ navigation }) => {
-  
   const { colors } = useTheme();
 
   return (
@@ -173,31 +178,27 @@ const HomeStack = ({ navigation }) => {
       initialRouteName="HomeTab"
       screenOptions={{
         headerTintColor: colors.character1, // 改變返回鍵與 Header 文字的顏色
-        headerShown:false,
+        //headerShown:false,
       }}
     >
       <Stack.Screen
         name="HomeTab"
         component={TheTab}
-        // options={() => ({
-        //   headerShown:false,
-        // })}
+        options={() => ({
+          headerShown: false,
+        })}
       />
       <Stack.Screen
         name="Question1"
         component={Question1Screen}
         options={() => ({
-          // headerTransparent: true, // 使 Header 背景透明化
-          // headerTitle: "Hi！你今天感覺如何？",
-          // headerTitleStyle: {
-          //   fontSize: 22,
-          //   fontFamily: "cjkFonts",
-          // },
+          headerTransparent: true, // 使 Header 背景透明化
+          headerTitle: "",
           headerLeft: () => (
             <TouchableOpacity onPress={() => navigation.goBack()}>
               <MaterialCommunityIcons
                 name="chevron-left"
-                size={32}
+                size={40}
                 style={{ color: colors.character1 }}
               />
             </TouchableOpacity>
@@ -208,11 +209,13 @@ const HomeStack = ({ navigation }) => {
         name="Question2"
         component={Question2Screen}
         options={() => ({
+          headerTransparent: true, // 使 Header 背景透明化
+          headerTitle: "",
           headerLeft: () => (
             <TouchableOpacity onPress={() => navigation.goBack()}>
               <MaterialCommunityIcons
                 name="chevron-left"
-                size={32}
+                size={40}
                 style={{ color: colors.character1 }}
               />
             </TouchableOpacity>
@@ -223,8 +226,8 @@ const HomeStack = ({ navigation }) => {
         name="Diary"
         component={DiaryScreen}
         options={() => ({
-          // headerTransparent: true, // 使 Header 背景透明化
-          // headerTitle: "", //文字透明化 => 直接不寫標題
+          headerTransparent: true, // 使 Header 背景透明化
+          headerTitle: "", //文字透明化 => 直接不寫標題
           headerLeft: () => (
             <TouchableOpacity onPress={() => navigation.goBack()}>
               <MaterialCommunityIcons
@@ -242,7 +245,7 @@ const HomeStack = ({ navigation }) => {
 /*Stack專區-終點*/
 
 /*Tab專區-起點*/
-const TheTab = () => {
+const TheTab = ({ navigation }) => {
   const { colors } = useTheme();
 
   return (
@@ -251,8 +254,9 @@ const TheTab = () => {
       screenOptions={{
         tabBarInactiveTintColor: colors.character1,
         tabBarActiveTintColor: colors.character2,
-        headerShown: false,
-        tabBarStyle: { height: 60, paddingTop: 13, paddingBottom: 13 },
+        //headerShown: false,
+        tabBarStyle: { height: 60 },
+        tabBarShowLabel: false,
       }}
     >
       <Tab.Screen
@@ -262,8 +266,12 @@ const TheTab = () => {
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="book" color={color} size={32} />
           ),
+          headerTransparent: true, // 使 Header 背景透明化
+          headerTitle: "", //文字透明化 => 直接不寫標題
           headerLeft: () => (
             <MaterialCommunityIcons
+              style={{ marginLeft: 15 }}
+              color={colors.character1}
               name={"menu"}
               size={32}
               onPress={() => navigation.openDrawer()}
@@ -275,6 +283,7 @@ const TheTab = () => {
         name="ActionButton"
         component={NullScreen}
         options={{
+          headerShown: false,
           tabBarButton: () => <ActionButton />
         }}
       />
@@ -282,6 +291,17 @@ const TheTab = () => {
         name="Statistic"
         component={StatisticsScreen}
         options={{
+          headerTransparent: true, // 使 Header 背景透明化
+          headerTitle: "", //文字透明化 => 直接不寫標題
+          headerLeft: () => (
+            <MaterialCommunityIcons
+              style={{ marginLeft: 15 }}
+              color={colors.character1}
+              name={"menu"}
+              size={32}
+              onPress={() => navigation.openDrawer()}
+            />
+          ),
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="heart-pulse" color={color} size={32} />
           ),

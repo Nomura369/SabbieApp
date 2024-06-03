@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.24.1",
+    "@expo/metro-runtime": "^3.2.1",
     "@gluestack-style/react": "^1.0.52",
     "@gluestack-ui/config": "^1.1.18",
     "@gluestack-ui/themed": "^1.1.18",
@@ -23,6 +24,7 @@
     "expo-font": "~11.4.0",
     "expo-splash-screen": "~0.20.5",
     "expo-status-bar": "~1.6.0",
+    "expo-updates": "~0.18.19",
     "firebase": "^10.12.1",
     "react": "18.2.0",
     "react-native": "0.72.10",

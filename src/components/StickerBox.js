@@ -51,16 +51,16 @@ const StickerBox = ({ choice, emotions }) => {
 
     switch(name){
         case "happy":
-            bgColor = colors.bg_happy_dark;
+            bgColor = colors.bg_happy_light;
             break;
         case "angry":
-            bgColor = colors.bg_angry_dark;
+            bgColor = colors.bg_angry_light;
             break;
         case "sad":
-            bgColor = colors.bg_sad_dark;
+            bgColor = colors.bg_sad_light;
             break;
         case "fear":
-            bgColor = colors.bg_fear_dark;
+            bgColor = colors.bg_fear_light;
             break;
         default:
             console.log("無法設定背景色");

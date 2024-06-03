@@ -3,54 +3,54 @@
     "data": [
         {
             "name": "happy",
-            "img": "https://imgur.com/w9UMyHr.png",
+            "img": "https://i.imgur.com/ParZqhd.png",
             "detail": ["開心", "興奮", "感恩", "滿足", "平靜", "自信", "自定義"],
             "img_detail": [
-                "https://imgur.com/jiBCCn5.png", 
-                "https://imgur.com/BplpWqH.png", 
-                "https://imgur.com/jx5JdgM.png", 
-                "https://imgur.com/1VsOWXS.png", 
-                "https://imgur.com/dgLRKGr.png", 
-                "https://imgur.com/stFr5Ce.png"
+                "https://i.imgur.com/xDEKdxh.png", 
+                "https://i.imgur.com/r5T7wfS.png", 
+                "https://i.imgur.com/DiMtyqe.png", 
+                "https://i.imgur.com/2Fgs3eP.png", 
+                "https://i.imgur.com/tDHDT5r.png", 
+                "https://i.imgur.com/KtL0HVY.png"
             ]
         },
         {
             "name": "angry",
-            "img": "https://imgur.com/Ym95Q0w.png",
+            "img": "https://i.imgur.com/BRvZu50.png",
             "detail": ["震怒", "不公平", "受冒犯", "受威脅", "受抨擊", "受傷害", "自定義"],
             "img_detail": [
-                "https://imgur.com/ZPXVQpR.png", 
-                "https://imgur.com/d9Sckk3.png", 
-                "https://imgur.com/16W8hFT.png", 
-                "https://imgur.com/npFjdmp.png", 
-                "https://imgur.com/oc6206S.png", 
-                "https://imgur.com/x6Usdk6.png"
+                "https://i.imgur.com/gGU7q3G.png", 
+                "https://i.imgur.com/7UdHD6Y.png", 
+                "https://i.imgur.com/Bf52wPU.png", 
+                "https://i.imgur.com/ryaIyuu.png", 
+                "https://i.imgur.com/IpTVm1r.png", 
+                "https://i.imgur.com/JUVT56h.png"
             ]
         },
         {
             "name": "sad",
-            "img": "https://imgur.com/J4FOB9Q.png",
+            "img": "https://i.imgur.com/EdMftUK.png",
             "detail": ["難過", "失望", "孤單", "內疚", "疲累", "迷失", "自定義"],
             "img_detail": [
-                "https://imgur.com/o7HwMV4.png", 
-                "https://imgur.com/dFRquC4.png", 
-                "https://imgur.com/eNZolE6.png", 
-                "https://imgur.com/hzUodMA.png", 
-                "https://imgur.com/oTxCvN3.png", 
-                "https://imgur.com/87AWKml.png"
+                "https://i.imgur.com/LYZz50i.png", 
+                "https://i.imgur.com/1fX4Fxj.png", 
+                "https://i.imgur.com/62WCWB6.png", 
+                "https://i.imgur.com/wFGQyTZ.png", 
+                "https://i.imgur.com/0tMzo5S.png", 
+                "https://i.imgur.com/9hU3yAE.png"
             ]
         },
         {
             "name": "fear",
-            "img": "https://imgur.com/FuWKIRS.png",
+            "img": "https://i.imgur.com/iZ3NN5j.png",
             "detail": ["緊張", "擔憂", "不安", "焦慮", "震驚", "不知所措", "自定義"],
             "img_detail": [
-                "https://imgur.com/rbIY9iR.png", 
-                "https://imgur.com/e6HYMKs.png", 
-                "https://imgur.com/GXnhecK.png", 
-                "https://imgur.com/2JU8N3d.png", 
-                "https://imgur.com/oKqFvb9.png", 
-                "https://imgur.com/OdqL3Ej.png"
+                "https://i.imgur.com/x82Bu4W.png", 
+                "https://i.imgur.com/fREYmxW.png", 
+                "https://i.imgur.com/ov1GABB.png", 
+                "https://i.imgur.com/HHCHJqX.png", 
+                "https://i.imgur.com/69qsKDN.png", 
+                "https://i.imgur.com/Ine2Y6n.png"
             ]
         }
     ]

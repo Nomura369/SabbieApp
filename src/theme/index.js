@@ -12,7 +12,7 @@ const TheTheme = {
      bg: '#F5F5F5', //一般背景
      bg_happy_dark: '#F7E098',
      bg_happy_light: '#FFF7D3',
-     bg_angry_dark: "#D9A7A4",
+     bg_angry_dark: "#F4A7A3",
      bg_angry_light: "#F2DEDD",
      bg_sad_dark: "#A9CAD7",
      bg_sad_light: "#D0E1E8",

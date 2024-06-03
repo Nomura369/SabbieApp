@@ -30,14 +30,14 @@ export default () => {
       <Pressable
         onPress={handleClose}
         bg={colors.primary2}
-        width="$10"
-        height="$10"
-        //hardShadow="5"
+        width={50}
+        height={50}
+        softShadow="1"
         borderRadius="$full"
         justifyContent="center"
         alignItems="center"
       >
-        <Text color="white" size="4xl">
+        <Text color="white" size="3xl" mb={4}>
           +
         </Text>
       </Pressable>
@@ -47,8 +47,7 @@ export default () => {
           <ActionsheetDragIndicatorWrapper>
             <ActionsheetDragIndicator />
           </ActionsheetDragIndicatorWrapper>
-          {/*希望這樣跳轉是沒問題的*/}
-          <ActionsheetItem onPress={() => navigation.navigate("Question")}>
+          {/* <ActionsheetItem onPress={() => navigation.navigate("Question")}>
             <HStack justifyContent="center" alignItems="center">
                 <Image 
                     alt="星砂瓶" 
@@ -61,9 +60,13 @@ export default () => {
                     <ActionsheetItemText fontFamily="cjkFonts" fontSize={16} color={colors.primary2}>每日一次</ActionsheetItemText>
                 </VStack>
             </HStack>
-          </ActionsheetItem>
-          {/*希望這樣跳轉是沒問題的*/}
-          <ActionsheetItem onPress={() => navigation.navigate("Diary")}> 
+          </ActionsheetItem> */}
+          <ActionsheetItem onPress={
+            () => {
+              navigation.navigate("Question1");
+              handleClose();
+            }
+          }> 
             <HStack justifyContent="center" alignItems="center">
                 <Image 
                     alt="寫日記" 

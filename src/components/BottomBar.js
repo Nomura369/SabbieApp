@@ -3,32 +3,31 @@ import { useTheme } from '@react-navigation/native';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const BottomBar = () => { // 物件，裡面有 name 和 detail 
+const BottomBar = ({ choice }) => { // 物件，裡面有 name 和 detail 
     const { colors } = useTheme(); 
     
-    // // 背景色設定
-    // let bgColor;
-    // switch(choice.name){
-    //     case "happy":
-    //         bgColor = colors.bg_happy_dark;
-    //         break;
-    //     case "angry":
-    //         bgColor = colors.bg_angry_dark;
-    //         break;
-    //     case "sad":
-    //         bgColor = colors.bg_sad_dark;
-    //         break;
-    //     case "fear":
-    //         bgColor = colors.bg_fear_dark;
-    //         break;
-    //     default:
-    //         console.log("無法設定底部工具列的背景色");
-    // }
-
+    // 背景色設定
+    let bgColor;
+    switch(choice.name){
+        case "happy":
+            bgColor = colors.bg_happy_dark;
+            break;
+        case "angry":
+            bgColor = colors.bg_angry_dark;
+            break;
+        case "sad":
+            bgColor = colors.bg_sad_dark;
+            break;
+        case "fear":
+            bgColor = colors.bg_fear_dark;
+            break;
+        default:
+            console.log("無法設定底部工具列的背景色");
+    }
 
     return (
         <HStack 
-            bg='#BDA9A6'
+            bg={bgColor} 
             height={60} 
             borderTopLeftRadius={25} 
             borderTopRightRadius={25} 

@@ -20,22 +20,22 @@ const Question2Screen = ({ route }) => {
     
     switch(name){
         case "happy":
-            bgColor = colors.bg_happy_dark;
+            bgColor = colors.bg_happy_light;
             detail = emotions[0].detail;
             imgSrc = emotions[0].img;
             break;
         case "angry":
-            bgColor = colors.bg_angry_dark;
+            bgColor = colors.bg_angry_light;
             detail = emotions[1].detail;
             imgSrc = emotions[1].img;
             break;
         case "sad":
-            bgColor = colors.bg_sad_dark;
+            bgColor = colors.bg_sad_light;
             detail = emotions[2].detail;
             imgSrc = emotions[2].img;
             break;
         case "fear":
-            bgColor = colors.bg_fear_dark;
+            bgColor = colors.bg_fear_light;
             detail = emotions[3].detail;
             imgSrc = emotions[3].img;
             break;

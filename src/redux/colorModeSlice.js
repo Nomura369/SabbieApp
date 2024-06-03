@@ -11,7 +11,7 @@ const colorModeSlice = createSlice({
     togglecolorScheme: (state) => {
         const nextColorScheme = state.colorScheme === 'light' ? 'dark' : 'light';
         state.colorScheme = nextColorScheme;
-        console.log(state.colorScheme);
+        //console.log(state.colorScheme);
     },
   },
 });

@@ -14,7 +14,6 @@ import {
     HStack,
     Center,
     Pressable,
-    useColorMode,
 } from "@gluestack-ui/themed";
 import Animated, {
     useAnimatedStyle,
@@ -28,8 +27,6 @@ import { StyleSheet } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
 import { gotoRegister, loginAsync } from "../redux/accountSlice"
 import { selectcolorScheme } from "../redux/colorModeSlice";
-
-import ColorModeBtn from "../components/ColorModeBtn";
 
 const AnimatedButton = Animated.createAnimatedComponent(Button);
 
@@ -98,15 +95,6 @@ const LoginScreen = () => {
             w="100%" flex={1}
             bg={colorScheme === "light" ? "#F5F5F5" : "#1D1D1D"}    
         >
-            <Box
-                style={{
-                    position: 'absolute',
-                    top: 25,
-                    left: "87%"
-                }}
-            >
-                <ColorModeBtn size={30} />
-            </Box>
             <Box p={2} py={8} w="90%" maxW={290}>
                 <VStack alignItems="center" mb={4}>
                     <Text fontFamily="cjkFonts" fontSize={35} color={textColorScheme}>登入</Text>
@@ -157,7 +145,7 @@ const LoginScreen = () => {
                                 : <ButtonText fontFamily="cjkFonts" fontSize={20} color="#F5F5F5">登入</ButtonText>
                         }
                     </AnimatedButton>
-                    <HStack mt={15} justifyContent="center" alignItems="center">
+                    <HStack mt={20} justifyContent="center" alignItems="center">
                         <Text fontFamily="cjkFonts" fontSize={16} color={textColorScheme}>
                             我是新來的。{" "}
                         </Text>

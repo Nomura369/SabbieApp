@@ -28,9 +28,22 @@
     },
     "plugin": [
       "expo-font",
-        {
-          "fonts": ["./assets/fonts/cjkFonts_allseto_v1.11.ttf"]
-        }
-    ]
+      {
+        "fonts": [
+          "./assets/fonts/cjkFonts_allseto_v1.11.ttf"
+        ]
+      }
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "f9508c98-f522-45dd-9944-5ad8bec0f7b5"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/f9508c98-f522-45dd-9944-5ad8bec0f7b5"
+    }
   }
 }
