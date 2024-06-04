@@ -5,7 +5,7 @@ import EmotionList from "../components/EmotionList";
 
 
 const Question1Screen = ({ navigation }) => {
-    const { colors } = useTheme(); // 該 Hooks 函數由<NavigationContainer>傳遞，得寫在函式裡
+    const { colors } = useTheme();
     return (
         <Center flex={1} bg={colors.bg}>
             <VStack>

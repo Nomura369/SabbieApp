@@ -60,7 +60,10 @@ const accountSlice = createSlice({
         },
         gotoLogin: (state) => {
             state.login.hasAccount = true;
-        }
+        },
+        loginShortcut: (state) => {
+            state.login.hasLogin = true;
+        },
     },
     extraReducers: (builder) => {
         builder
@@ -91,7 +94,7 @@ const accountSlice = createSlice({
 export const selectGeneral = (state) => state.account.general;
 export const selectLogin = (state) => state.account.login;
 
-export const { setGeneralAccountInfo, gotoRegister, gotoLogin, signOut } = accountSlice.actions;
+export const { setGeneralAccountInfo, gotoRegister, gotoLogin, signOut, loginShortcut } = accountSlice.actions;
 export { loginAsync, registerAsync, readUserAsync, updateUserAsync }
 
 export default accountSlice.reducer;

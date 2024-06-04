@@ -155,7 +155,7 @@ const CustomDrawerContent = (props) => { // Drawer頁面排版
           alt='userImage'
         />
         {/*登入後再從 firebase 撈用戶名來用……原本是這麼打算啦*/}
-        <Text fontSize={20} color={colors.character2} my={16}>很高興見到你！</Text>
+        <Text fontSize={20} color={colors.character1} my={16}>很高興見到你！</Text>
       </VStack>
       <Divider mb={8} />
 
@@ -252,8 +252,8 @@ const TheTab = ({ navigation }) => {
     <Tab.Navigator
       initialRouteName="Home"
       screenOptions={{
-        tabBarInactiveTintColor: colors.character1,
-        tabBarActiveTintColor: colors.character2,
+        tabBarInactiveTintColor: colors.character2,
+        tabBarActiveTintColor: colors.character1,
         //headerShown: false,
         tabBarStyle: { height: 60 },
         tabBarShowLabel: false,

@@ -10,7 +10,7 @@ export default function HomeScreen({ navigation }) {
 
     const [selectedIndex, setSelectedIndex] = useState(0);
 
-    const SegmentedContent = ({ navigation }) => {
+    const SegmentedContent = () => {
         // <View style={styles.header}>
         //   <Pressable onPress={() => navigation.toggleDrawer()}>
         //     <Image 

@@ -11,7 +11,7 @@ const DetailList = ({ detail, name }) => {
     const choice = { name, detail };
 
     // 會影響排版的變數
-    const textColor = detail === "自定義" ? colors.character_sec : colors.character;
+    const textColor = detail === "自定義" ? colors.character2 : colors.character1;
     let bgColor;
     
     switch(name){

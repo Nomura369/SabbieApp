@@ -56,7 +56,7 @@ const Question2Screen = ({ route }) => {
                     <Text 
                         fontFamily="cjkFonts"
                         lineHeight={40}
-                        color={colors.character} 
+                        color={colors.character1} 
                         fontSize={30} 
                         mx={47} mt={25} mb={40}>哪個詞彙更能形容你的感受？</Text>
                 </VStack>

@@ -4,11 +4,11 @@ const TheTheme = {
    ...DefaultTheme,
    colors: {
      ...DefaultTheme.colors,
-     primary1: "#71BD80",  //星砂瓶頁面按鈕等(棕色)
+     primary1: "#BDA9A6",  //星砂瓶頁面按鈕等(棕色)
      primary2: "#B7E5C0", //主頁的action button等(綠色)
      primary3: "#E4E3E3", //登入頁面按鈕等(深灰色)
-     character1: '#515151', //通常字體與icon顏色(偏淺)
-     character2: "#1D1D1D", //部分字體與icon顏色(偏深)
+     character1: '#515151', //通常字體與icon顏色
+     character2: "#8E8E8E", //部分字體與icon顏色(偏淺)
      bg: '#F5F5F5', //一般背景
      bg_happy_dark: '#F7E098',
      bg_happy_light: '#FFF7D3',

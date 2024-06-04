@@ -1,9 +1,11 @@
 import { HStack, Text } from "@gluestack-ui/themed";
 import { useTheme } from '@react-navigation/native';
+import { useNavigation } from "@react-navigation/native";
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const BottomBar = ({ choice }) => { // 物件，裡面有 name 和 detail 
+    const navigation = useNavigation();
     const { colors } = useTheme(); 
     
     // 背景色設定
@@ -59,7 +61,7 @@ const BottomBar = ({ choice }) => { // 物件，裡面有 name 和 detail
                     <MaterialCommunityIcons
                         name={"check"}
                         size={32}
-                        //onPress={() => navigation.goBack()}
+                        onPress={() => navigation.navigate("HomeTab")}
                         style={{ color: "#ffffff", marginRight: 23 }}
                     />
                 </HStack>

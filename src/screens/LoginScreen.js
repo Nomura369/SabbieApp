@@ -25,7 +25,7 @@ import Animated, {
 import { StyleSheet } from "react-native";
 
 import { useSelector, useDispatch } from "react-redux";
-import { gotoRegister, loginAsync } from "../redux/accountSlice"
+import { gotoRegister, loginAsync, loginShortcut } from "../redux/accountSlice"
 import { selectcolorScheme } from "../redux/colorModeSlice";
 
 const AnimatedButton = Animated.createAnimatedComponent(Button);
@@ -35,7 +35,7 @@ const LoginScreen = () => {
     const [loginRequest, setLoginRequest] = useState(false);
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
-    
+
     // 色彩模式相關
     const colorScheme = useSelector(selectcolorScheme);
     const textColorScheme = colorScheme === "light" ? "#515151" : "#F5F5F5";
@@ -91,14 +91,16 @@ const LoginScreen = () => {
     }
 
     return (
-        <Center 
+        <Center
             w="100%" flex={1}
-            bg={colorScheme === "light" ? "#F5F5F5" : "#1D1D1D"}    
+            bg={colorScheme === "light" ? "#F5F5F5" : "#1D1D1D"}
         >
             <Box p={2} py={8} w="90%" maxW={290}>
-                <VStack alignItems="center" mb={4}>
-                    <Text fontFamily="cjkFonts" fontSize={35} color={textColorScheme}>登入</Text>
-                </VStack>
+                <Pressable onPress={() => dispatch(loginShortcut())}>
+                    <VStack alignItems="center" mb={4}>
+                        <Text fontFamily="cjkFonts" fontSize={35} color={textColorScheme}>登入</Text>
+                    </VStack>
+                </Pressable>
                 <VStack space={3} mt={15}>
                     <FormControl mb={17}>
                         <FormControlLabel>
